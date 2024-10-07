@@ -4,8 +4,8 @@ import os
 import csv
 
 #Files to load and output
-file_to_load = os.path.join("Resources", "python-challenge\PyBank\Resources\budget_data.csv")  # Input file path
-file_to_output = os.path.join("analysis", "python-challenge\PyBank\analysis\budget_analysis.txt")  # Output file path
+file_to_load = os.path.join("Resources", "/workspaces/python-challenge/PyBank/Resources/budget_data.csv")  # Input file path
+file_to_output = os.path.join("analysis", "/workspaces/python-challenge/PyBank/analysis/budget_analysis.txt")  # Output file path
 
 #Define Vars and track financial data
 total_months = 0
@@ -18,7 +18,7 @@ greatest_increase = (' ', 0)  # (month, amt)
 greatest_decrease = (' ', 0)  # (month, amt)
 
 # Open and read the csv
-with open('python-challenge\PyBank\Resources\budget_data.csv') as financial_data:
+with open('/workspaces/python-challenge/PyBank/Resources/budget_data.csv') as financial_data:
     reader = csv.reader(financial_data)
 
     # Skip the header row
@@ -76,5 +76,5 @@ output_summary = (
 )
 
 # Write the results to a text file
-with open('python-challenge\PyBank\analysis\budget_analysis.txt', "w") as txt_file:
+with open('/workspaces/python-challenge/PyBank/analysis/budget_analysis.txt', "w") as txt_file:
     txt_file.write(output_summary)
