@@ -3,8 +3,8 @@ import os
 import csv
 
 #files to load and output
-file_to_load = os.path.join("Resources", 'python-challenge\PyPoll\Resources\election_data.csv')  # Input file path
-file_to_output = os.path.join("analysis", 'python-challenge\PyPoll\analysis\poll_analysis.txt')  # Output file path
+file_to_load = os.path.join("Resources", '/workspaces/python-challenge/PyPoll/Resources/election_data.csv')  # Input file path
+file_to_output = os.path.join("analysis", '/workspaces/python-challenge/PyPoll/analysis/poll_analysis.txt')  # Output file path
 
 #Start each variable
 total_votes = 0 #Total number of votes cast
@@ -19,7 +19,7 @@ winning_candidate = ' '
 winning_vote_count = 0
 
 #Open CSV file
-with open('python-challenge\PyPoll\Resources\election_data.csv') as election_data:
+with open('/workspaces/python-challenge/PyPoll/Resources/election_data.csv') as election_data:
     reader = csv.reader(election_data)
 
     header = next(reader)
@@ -40,7 +40,7 @@ with open('python-challenge\PyPoll\Resources\election_data.csv') as election_dat
 
 print(vote_counts)
 
-with open('python-challenge\PyPoll\analysis\poll_analysis.txt', "w") as poll_analysis:
+with open('/workspaces/python-challenge/PyPoll/analysis/poll_analysis.txt', "w") as poll_analysis:
 
     # Print the total vote count (to terminal)
     print(f'Total Votes: {total_votes}')
